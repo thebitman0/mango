@@ -15,7 +15,8 @@ namespace mango
             { "de-de", new DEStandardLayout() },
             { "es-es", new ESStandardLayout() },
             { "fr-fr", new FRStandardLayout() },
-            { "tr-tr", new TRStandardLayout() }
+            { "tr-tr", new TRStandardLayout() },
+            { "no-no", new NOStandardLayout() }
         };
 
         public static void LoadKeys(string[] args)
@@ -35,7 +36,7 @@ namespace mango
 
             if (keymapTo == "-l")
             {
-                Console.WriteLine("loadkeys: Available keymaps: gb-uk, us-us, de-de, es-es, fr-fr, tr-tr", SVGAIIColor.Gray);
+                Console.WriteLine("loadkeys: Available keymaps: gb-uk, us-us, de-de, es-es, fr-fr, tr-tr, no-no", SVGAIIColor.Gray);
             }
             else if (scanMaps.TryGetValue(keymapTo, out ScanMapBase map))
             {
